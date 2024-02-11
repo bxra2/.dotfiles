@@ -43,6 +43,9 @@ alias shutdown='sudo shutdown now'
 alias myip='curl ipinfo.io/ip' 
 alias c='clear'
 alias vi='vim'
+alias cdsda='cd /mnt/sda/baraa/'
+
+
 ## File Extraction
 ex ()
 {
