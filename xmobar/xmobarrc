@@ -31,6 +31,8 @@ Config { font            = "Ubuntu Bold 9"
                     , Run Uptime ["-t", "uptime: <days>d <hours>h"] 360
                         -- Brightness
                     , Run Brightness [ "-t", "Br: <percent>%", "--", "-D", "intel_backlight" ] 10
+                        -- Volume
+                    , Run Com "/home/baraa/.config/xmobar/volume.sh" [] "volume" 10
                         -- Time and date
                     , Run Date "<fn=2>\xf017</fn>  %b %d %Y - (%H:%M) " "date" 50
                     , Run Date "<fn=2>\xf017</fn>  %b %d %Y - (%H:%M) " "date" 50
@@ -40,5 +42,5 @@ Config { font            = "Ubuntu Bold 9"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <icon=knight.xpm/>  | %UnsafeStdinReader%  }{  <box type=Bottom width=2 mb=2 color=#b8bb26><fc=#b8bb26><action=`kitty -e htop`>%cpu%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#458588><fc=#458588><action=`kitty -e htop`>%memory%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#d79921><fc=#d79921>%disku%</fc></box>    <box type=Bottom width=2 mb=2 color=#b16286><fc=#b16286>%uparrow%  %uptime%</fc></box>   <box type=Bottom width=2 mb=2 color=#83a598><fc=#83a598>%date%</fc></box>  <box type=Bottom width=2 mb=2 color=#d79921><fc=#d79921>%bright%</fc></box>  "
+       , template = " <icon=knight.xpm/>  | %UnsafeStdinReader%  }{  <box type=Bottom width=2 mb=2 color=#b8bb26><fc=#b8bb26><action=`kitty -e htop`>%cpu%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#458588><fc=#458588><action=`kitty -e htop`>%memory%</action></fc></box>    <box type=Bottom width=2 mb=2 color=#d79921><fc=#d79921>%disku%</fc></box>    <box type=Bottom width=2 mb=2 color=#b16286><fc=#b16286>%uparrow%  %uptime%</fc></box>    <box type=Bottom width=2 mb=2 color=#83a598><fc=#83a598>%date%</fc></box>   <box type=Bottom width=2 mb=2 color=#d79921><fc=#d79921>%bright%</fc></box>   <box type=Bottom width=2 mb=2 color=#8ec07c><fc=#8ec07c>Vol:%volume%</fc></box>  "
        }
